@@ -1,0 +1,63 @@
+@keyframes turnTicker {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes cloudSwirl {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes windy {
+  0% {
+    transform: translateX(0rem);
+  }
+
+  50% {
+    transform: translateX(0.5rem);
+  }
+
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes foot-tapping {
+  0% {
+    transform: rotateZ(10deg);
+  }
+
+  50% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes right {
+  100% {
+    transform: rotate(180deg);
+  }
+}

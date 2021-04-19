@@ -1,0 +1,57 @@
+.start {
+  background-color: #0275d8;
+  margin: 5rem;
+  padding: 5rem 0;
+
+  &__description {
+    padding-top: 2rem;
+  }
+}
+
+.ticker {
+  &__heading {
+    font-size: 15rem;
+    @include respond(tab-landscape) {
+      // width < 900
+      font-size: 13rem; // 1 rem = 9px
+    }
+
+    @include respond(tab-portrait) {
+      // width < 600
+      font-size: 7rem;
+    }
+
+    @include respond(big-desktop) {
+      font-size: 75%; // 1 rem = 12px
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+#Snowballs {
+  animation: windy 0.5s infinite ease;
+}
+
+#LeftTree #Vector {
+  animation: windy 2s infinite linear;
+}
+
+#Cloud {
+  animation: cloudSwirl 10s infinite;
+}
+
+#clock-ticker {
+  animation: turnTicker 3s infinite linear;
+  transform-origin: 15% 30%;
+  transform-box: fill-box;
+}
+
+#Lady #Vector_26 {
+  animation: foot-tapping 2s infinite linear;
+  transform-origin: 15% 30%;
+  transform-box: fill-box;
+}

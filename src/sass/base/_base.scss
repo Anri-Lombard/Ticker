@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  text-align: center;
+}
+
+// MEDIA QUERY MANAGERS
+/*
+0 - 600px: Phones
+600 - 900px: tablet portrait
+900 - 1200px: tablet landscape
+1200 - 1800px: normal
+1800 + : larger desktops
+
+
+$breakpoint choices:
+ - phone
+ - tab-portrait
+ - tab-landscape
+ - big-desktop
+
+
+ORDER: Base + typography > general layout > page layout > components
+*/
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        @media (max-width: 37.5em) {
+            // 600px
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tab-portrait {
+        @media (max-width: 56.25em) {
+            //900px
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tab-landscape {
+        @media (max-width: 75em) {
+            //1200px
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==big-desktop {
+        @media (min-width: 112.5em) {
+            //1800
+            @content
+        }
+
+        ;
+    }
+}

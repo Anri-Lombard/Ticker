@@ -1,0 +1,86 @@
+.circular {
+  height: 7rem;
+  width: 7rem;
+  background: red;
+  margin: 5rem auto 20rem auto;
+  position: relative;
+  transform: scale(2);
+  border-radius: 100%;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--timer-color);
+  }
+
+  &__inner {
+    // display: none;
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    height: 5rem;
+    width: 5rem;
+    margin: -2.5rem 0 0 -2.5rem;
+    background: white;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &__circle {
+    &--bar {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #dbf6e9;
+      border-radius: 100%;
+      -webkit-border-radius: 100%;
+      clip: rect(0rem, 7rem, 7rem, 3.5rem);
+
+      &-left,
+      &-right {
+        &--progress {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: var(--timer-color);
+          border-radius: 100%;
+          -webkit-border-radius: 100%;
+          clip: rect(0rem, 3.5rem, 7rem, 0rem);
+        }
+      }
+
+      &-left {
+        &--progress {
+          z-index: 1;
+          animation: left var(--time-of-animation) linear both;
+        }
+      }
+
+      &-right {
+        z-index: 3;
+        transform: rotate(180deg);
+
+        &--progress {
+          animation: right var(--time-of-animation) linear both;
+          animation-delay: var(--time-of-animation);
+        }
+      }
+    }
+  }
+}
+
+.margin_response {
+  margin: 10rem 1rem 25rem 1rem;
+}
