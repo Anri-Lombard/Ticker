@@ -21,6 +21,19 @@
           v-if="!clicked"
           @click="
             startCounter();
+            maxMode();
+          "
+        >
+          Max Mode (for preparation to present - 1 minute activities)
+        </button>
+      </div>
+      <div class="mb-5 col-12">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          v-if="!clicked"
+          @click="
+            startCounter();
             easyMode();
           "
         >
@@ -168,6 +181,9 @@ export default {
   methods: {
     testMode() {
       this.activityTime = 0.25;
+    },
+    maxMode() {
+      this.activityTime = 1;
     },
     easyMode() {
       this.activityTime = 10;
