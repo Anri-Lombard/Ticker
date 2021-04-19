@@ -6,9 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "compile-sass": "node-sass sass/main.scss css/style.css --watch",
-    "deploy": "sh deploy.sh",
-    "publish": "npm run build && rm -rf docs; cp -r dist docs && sed -i -e 's/src=\\//src=/g' docs/index.html ; sed -i -e 's/href=\\//href=/g' docs/index.html"
+    "compile-sass": "node-sass sass/main.scss css/style.css --watch"
   },
   "dependencies": {
     "@lottiefiles/lottie-interactivity": "^0.1.4",
