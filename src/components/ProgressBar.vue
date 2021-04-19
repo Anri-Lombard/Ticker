@@ -11,7 +11,7 @@
             testMode();
           "
         >
-          For testing (10 second activities)
+          For testing (15 second activities)
         </button>
       </div>
       <div class="mb-5 col-12">
@@ -167,7 +167,7 @@ export default {
   },
   methods: {
     testMode() {
-      this.activityTime = 0.1;
+      this.activityTime = 0.25;
     },
     easyMode() {
       this.activityTime = 10;
@@ -222,7 +222,7 @@ export default {
             this.counter += 1;
           }
         }, this.activityTime * 60 * 10);
-      }, 5000);
+      }, 6000);
       var timerAnimate = setInterval(() => {
         this.numberAnimation += 1;
         if (this.numberAnimation === 6) {
