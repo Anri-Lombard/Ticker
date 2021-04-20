@@ -7,7 +7,7 @@
           Tick the morning one task at a time
         </p>
       </div>
-      <ImageWaiting class="mb-5" />
+      <ImageWaiting class="padding-responsive" />
       <h1 class="start__description mb-5 white_text">
         We have 1440 minutes every day... let's use the first few right
       </h1>
