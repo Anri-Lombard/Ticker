@@ -83,4 +83,24 @@
 
 .margin_response {
   margin: 10rem 1rem 25rem 1rem;
+
+  @include respond(tab-portrait) {
+    // width < 600
+    font-size: 7rem;
+  }
+
+  @include respond(phone) {
+    margin: 3rem 1rem 10rem 1rem;
+  }
+}
+
+.blockquote-footer {
+  @include respond(tab-portrait) {
+    // width < 600
+    font-size: 1.2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 0.8rem;
+  }
 }

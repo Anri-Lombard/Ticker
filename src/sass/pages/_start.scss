@@ -5,12 +5,27 @@
 
   &__description {
     padding-top: 2rem;
+
+    @include respond(tab-portrait) {
+      // width < 600
+      font-size: 1.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1rem;
+      margin: 0 1rem 0 1rem;
+    }
   }
 }
 
 .ticker {
   &__heading {
     font-size: 15rem;
+
+    @include respond(big-desktop) {
+      font-size: 75%; // 1 rem = 12px
+    }
+
     @include respond(tab-landscape) {
       // width < 900
       font-size: 13rem; // 1 rem = 9px
@@ -21,14 +36,23 @@
       font-size: 7rem;
     }
 
-    @include respond(big-desktop) {
-      font-size: 75%; // 1 rem = 12px
+    @include respond(phone) {
+      font-size: 3rem;
     }
   }
 
   &__paragraph {
     font-size: 1.5rem;
     padding-bottom: 5rem;
+
+    @include respond(tab-portrait) {
+      // width < 600
+      font-size: 1.2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -54,4 +78,18 @@
   animation: foot-tapping 2s infinite linear;
   transform-origin: 15% 30%;
   transform-box: fill-box;
+}
+
+.story_text {
+  font-size: 2rem;
+  margin: 15rem 5rem 10rem 5rem;
+
+  @include respond(tab-portrait) {
+    // width < 600
+    font-size: 1.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1rem;
+  }
 }

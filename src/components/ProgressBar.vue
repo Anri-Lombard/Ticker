@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="mt-5 margin-bottom-large">
+    <div class="mt-5 mx-2 margin-bottom-large">
       <div class="mb-5 col-12">
         <button
           type="submit"
@@ -14,7 +14,7 @@
           For testing (15 second activities)
         </button>
       </div>
-      <div class="mb-5 col-12">
+      <div class="mb-5 mx-2 col-12">
         <button
           type="submit"
           class="btn btn-primary"
@@ -27,7 +27,7 @@
           Max Mode (for preparation to present - 1 minute activities)
         </button>
       </div>
-      <div class="mb-5 col-12">
+      <div class="mb-5 mx-2 col-12 responsive-button">
         <button
           type="submit"
           class="btn btn-primary"
@@ -40,7 +40,7 @@
           Einstein in a year (10 min activities)
         </button>
       </div>
-      <div class="mb-5 col-12">
+      <div class="mb-5 mx-2 col-12">
         <button
           type="submit"
           class="btn btn-primary"
