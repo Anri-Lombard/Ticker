@@ -16,8 +16,12 @@
         There is said to be a person... so devishly handsome as you, to be on
         the path the masters thought was not possible. Now it is up to you to
         prove them right... Every. Single. Morning.
+        <br />
+        <br />
+        This is Tracy's part.
       </div>
       <WinkFace />
+      <MaxOne />
     </section>
   </div>
 </template>
@@ -27,6 +31,7 @@
 import ImageWaiting from "@/components/ImageWaiting";
 import ImprovementMan from "../components/ImprovementMan";
 import WinkFace from "../components/WinkFace";
+import MaxOne from "../components/MaxOne";
 
 export default {
   name: "Home",
@@ -34,6 +39,7 @@ export default {
     ImageWaiting,
     ImprovementMan,
     WinkFace,
+    MaxOne,
   },
 };
 </script>
