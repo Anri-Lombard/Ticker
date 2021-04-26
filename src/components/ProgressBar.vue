@@ -129,6 +129,8 @@ import Number4 from "./Number4";
 import Number5 from "./Number5";
 import Confetti from "./Confetti";
 
+// audio.play();
+
 export default {
   setup() {
     const tasks = useLoadTasks();
@@ -149,6 +151,19 @@ export default {
   },
   data() {
     return {
+      numberAudio: new Audio(
+        require("../sounds/countdown/ES_Firework Boom - SFX Producer.mp3")
+      ),
+      numberAudioCount: 0,
+      clockAudio: new Audio(
+        require("../sounds/clock/ES_Watch Clock Ticking - SFX Producer.mp3")
+      ),
+      clickItRedAudio: new Audio(
+        require("../sounds/clock/ES_Sci Fi Alarm Warning 1 - SFX Producer.mp3")
+      ),
+      fireworkAudio: new Audio(
+        require("../sounds/fireworks/340279__kevinduffy1234__medium-impact-man-os.wav")
+      ),
       numberAnimation: 0,
       showFirstCircle: false,
       showSecondCircle: false,
@@ -193,6 +208,7 @@ export default {
     },
     startCounter() {
       this.clicked = true;
+
       setTimeout(() => {
         console.log("In first interval");
         this.timeOfAnimation = parseFloat(this.taskTime);
@@ -202,6 +218,8 @@ export default {
 
           if (this.counter == 100 || this.finishProgress === true) {
             this.finishProgress = true;
+            this.clickItRedAudio.pause();
+            this.clockAudio.pause();
 
             // Reset for next circle
             setTimeout(() => {
@@ -209,6 +227,7 @@ export default {
                 clearInterval(interval);
                 this.showThirdCircle = false;
                 this.celebrate = true;
+                this.fireworkAudio.play();
               } else if (this.loop == 1) {
                 this.showSecondCircle = true;
                 this.showFirstCircle = false;
@@ -234,6 +253,11 @@ export default {
           } else {
             if (this.counter == 90) {
               this.timerColor = "d" + 44000;
+              this.clickItRedAudio.currentTime = 0;
+              this.clickItRedAudio.play();
+              this.clockAudio.pause();
+            } else if (this.counter < 90 && this.counter > 0) {
+              this.clockAudio.play();
             }
             this.counter += 1;
           }
@@ -241,6 +265,11 @@ export default {
       }, 6000);
       var timerAnimate = setInterval(() => {
         this.numberAnimation += 1;
+        if (this.numberAudioCount < 5) {
+          this.numberAudio.playbackRate = 3.0;
+          this.numberAudio.play();
+          this.numberAudioCount += 1;
+        }
         if (this.numberAnimation === 6) {
           this.showFirstCircle = true;
           clearInterval(timerAnimate);

@@ -21,8 +21,8 @@
         This is Tracy's part.
       </div>
       <WinkFace />
-      <MaxOne />
     </section>
+    <MaxOne />
   </div>
 </template>
 
