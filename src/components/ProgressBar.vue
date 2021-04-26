@@ -162,7 +162,13 @@ export default {
         require("../sounds/clock/ES_Sci Fi Alarm Warning 1 - SFX Producer.mp3")
       ),
       fireworkAudio: new Audio(
-        require("../sounds/fireworks/340279__kevinduffy1234__medium-impact-man-os.wav")
+        require("../sounds/celebrate/139973__jessepash__crowd-yay-applause-25ppl-long.wav")
+      ),
+      correctAudio: new Audio(
+        require("../sounds/right/421002__eponn__correct.wav")
+      ),
+      wrongAudio: new Audio(
+        require("../sounds/wrong/493163__breviceps__buzzer-sounds-wrong-answer-error.wav")
       ),
       numberAnimation: 0,
       showFirstCircle: false,
@@ -227,6 +233,7 @@ export default {
                 clearInterval(interval);
                 this.showThirdCircle = false;
                 this.celebrate = true;
+                this.fireworkAudio.loop = true;
                 this.fireworkAudio.play();
               } else if (this.loop == 1) {
                 this.showSecondCircle = true;
@@ -280,8 +287,10 @@ export default {
       this.finishProgress = true;
       if (this.counter >= 90) {
         this.timerColor = "ffc" + 93 + "c";
+        this.correctAudio.play();
       } else if (this.counter < 90) {
         this.timerColor = 9 + "e" + 9 + "d" + 89;
+        this.wrongAudio.play();
       }
     },
   },
