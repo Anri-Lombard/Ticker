@@ -1,24 +1,23 @@
 <template>
   <section>
-    <div class="mt-5 margin-bottom-large">
-      <div class="mb-5 col-12">
+    <div v-if="clicked" style="margin-top: 5rem"></div>
+    <div v-if="!clicked" class="mt-5 margin-bottom-large">
+      <div v-if="!clicked" class="mb-5 col-12">
         <button
           type="submit"
           class="btn btn-primary mx-2"
-          v-if="!clicked"
           @click="
             startCounter();
             testMode();
           "
         >
-          For testing (15 second activities)
+          For testing (3 second activities)
         </button>
       </div>
-      <div class="mb-5 col-12">
+      <div v-if="!clicked" class="mb-5 col-12">
         <button
           type="submit"
           class="btn btn-primary mx-2"
-          v-if="!clicked"
           @click="
             startCounter();
             maxMode();
@@ -27,11 +26,10 @@
           Max Mode (for preparation to present - 1 minute activities)
         </button>
       </div>
-      <div class="mb-5 col-12 responsive-button">
+      <div v-if="!clicked" class="mb-5 col-12 responsive-button">
         <button
           type="submit"
           class="btn btn-primary mx-2"
-          v-if="!clicked"
           @click="
             startCounter();
             easyMode();
@@ -40,11 +38,10 @@
           Einstein in a year (10 min activities)
         </button>
       </div>
-      <div class="mb-5 col-12">
+      <div v-if="!clicked" class="mb-5 col-12">
         <button
           type="submit"
           class="btn btn-primary mx-2"
-          v-if="!clicked"
           @click="
             startCounter();
             hardMode();
@@ -216,7 +213,7 @@ export default {
   },
   methods: {
     testMode() {
-      this.activityTime = 0.25;
+      this.activityTime = 0.05;
     },
     maxMode() {
       this.activityTime = 1;

@@ -19,13 +19,13 @@
       <ImprovementMan class="mb-5" />
       <div class="story_text white_text">
         <br />
-        Olaf is unflappable - on top of it all
+        Olaf is unflappable and on top of it all!
         <br />
-        They don't hide from a challenge, not one win is ever a close call
+        They don't hide from a challenge, no win is ever a close call
         <br />
         While everyone else is snoozing away
         <br />
-        This early bird, gets their way
+        This early bird gets their way
         <br />
       </div>
       <ImprovementWoman />
