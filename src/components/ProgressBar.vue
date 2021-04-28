@@ -113,8 +113,14 @@
         :finishCounter="finishCounter"
       />
     </div>
-    <Confetti v-if="celebrate" />
+    <Confetti v-if="celebrate && successCount == 3" />
+    <WinkFace v-if="celebrate && successCount == 1" />
+    <WinkFace v-if="celebrate && successCount == 2" />
+    <IceCreamDrop v-if="fail && successCount == 0" />
     <UserList v-if="!clicked" />
+    <p v-if="celebrate || fail" class="circular__title">
+      You completed {{ successCount }} / 3 tasks
+    </p>
   </section>
 </template>
 
@@ -128,6 +134,8 @@ import Number3 from "./Number3";
 import Number4 from "./Number4";
 import Number5 from "./Number5";
 import Confetti from "./Confetti";
+import WinkFace from "./WinkFace";
+import IceCreamDrop from "./IceCreamDrop";
 
 // audio.play();
 
@@ -140,6 +148,7 @@ export default {
   },
   name: "ProgressBar",
   components: {
+    WinkFace,
     Circle,
     UserList,
     Number1,
@@ -148,6 +157,7 @@ export default {
     Number4,
     Number5,
     Confetti,
+    IceCreamDrop,
   },
   data() {
     return {
@@ -161,7 +171,7 @@ export default {
       clickItRedAudio: new Audio(
         require("../sounds/clock/ES_Sci Fi Alarm Warning 1 - SFX Producer.mp3")
       ),
-      fireworkAudio: new Audio(
+      successAudio: new Audio(
         require("../sounds/celebrate/139973__jessepash__crowd-yay-applause-25ppl-long.wav")
       ),
       correctAudio: new Audio(
@@ -169,6 +179,9 @@ export default {
       ),
       wrongAudio: new Audio(
         require("../sounds/wrong/493163__breviceps__buzzer-sounds-wrong-answer-error.wav")
+      ),
+      failAudio: new Audio(
+        require("../sounds/fail/394900__funwithsound__failure-1.wav")
       ),
       numberAnimation: 0,
       showFirstCircle: false,
@@ -186,6 +199,8 @@ export default {
       task3Text: "",
       timerColor: 4158 + "d" + 0,
       celebrate: false,
+      fail: false,
+      successCount: 0,
     };
   },
   computed: {
@@ -232,9 +247,15 @@ export default {
               if (this.loop === 3) {
                 clearInterval(interval);
                 this.showThirdCircle = false;
-                this.celebrate = true;
-                this.fireworkAudio.loop = true;
-                this.fireworkAudio.play();
+                if (this.successCount > 0) {
+                  this.celebrate = true;
+                  this.successAudio.loop = true;
+                  this.successAudio.play();
+                } else {
+                  this.fail = true;
+                  this.failAudio.loop = true;
+                  this.failAudio.play();
+                }
               } else if (this.loop == 1) {
                 this.showSecondCircle = true;
                 this.showFirstCircle = false;
@@ -288,6 +309,7 @@ export default {
       if (this.counter >= 90) {
         this.timerColor = "ffc" + 93 + "c";
         this.correctAudio.play();
+        this.successCount += 1;
       } else if (this.counter < 90) {
         this.timerColor = 9 + "e" + 9 + "d" + 89;
         this.wrongAudio.play();

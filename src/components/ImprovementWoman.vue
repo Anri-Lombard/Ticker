@@ -1,9 +1,9 @@
 <template>
   <lottie-player
-    src="https://assets8.lottiefiles.com/datafiles/068H91NVUJLGN4p/data.json"
+    src="https://assets5.lottiefiles.com/packages/lf20_ak1sq2fq.json"
     background="transparent"
     speed="1"
-    style="width: 100vw; height: 100vh;"
+    style="width: 100%; height: 100%;"
     loop
     autoplay
   ></lottie-player>

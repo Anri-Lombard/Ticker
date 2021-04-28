@@ -1,6 +1,6 @@
 <template>
   <lottie-player
-    src="https://assets8.lottiefiles.com/datafiles/068H91NVUJLGN4p/data.json"
+    src="https://assets6.lottiefiles.com/private_files/lf30_itjoc71i.json"
     background="transparent"
     speed="1"
     style="width: 100vw; height: 100vh;"
