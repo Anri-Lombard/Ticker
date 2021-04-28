@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div v-if="clicked" style="margin-top: 5rem"></div>
+    <div v-if="clicked && !fail && !celebrate" style="margin-top: 5rem"></div>
     <div v-if="!clicked" class="mt-5 margin-bottom-large">
       <div v-if="!clicked" class="mb-5 col-12">
         <button
