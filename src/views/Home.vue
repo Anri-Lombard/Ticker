@@ -74,7 +74,6 @@
         <form action="/getshtdone">
           <input
             type="submit"
-            href="/getshtdone"
             class="maxButton"
             style="background-color: #eb3a1b; color: white"
             value="Let's Go"

@@ -135,7 +135,7 @@
     <p v-if="celebrate || fail" class="circular__title">
       You completed {{ successCount }} / 3 tasks
     </p>
-    <p class="mt-5" v-if="celebrate">
+    <p class="mt-5" v-if="celebrate || fail">
       Once your done and want to go again, head back to Home and refresh your
       page...
     </p>
