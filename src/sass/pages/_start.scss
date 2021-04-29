@@ -105,3 +105,31 @@
     margin: 10rem 1rem 8rem 1rem;
   }
 }
+
+#RightArm {
+  animation: wave 5s infinite linear;
+  transform-box: fill-box;
+  z-index: 5;
+}
+
+#TopBody,
+#LowerBody {
+  animation: littleWindy 0.5s infinite linear;
+}
+
+#Head {
+  animation: shakeHead 1s infinite linear;
+  transform-box: fill-box;
+  transform-origin: 50% 30%;
+}
+
+.maxButton {
+  background-color: #eb3a1b;
+  color: white;
+  padding: 01rem;
+  border-radius: 150%;
+  box-shadow: 1rem 1rem rgba(black, 0.5);
+
+  &:hover {
+  }
+}

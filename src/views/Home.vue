@@ -71,7 +71,12 @@
         <br />then maybe you and Alex could be great, too, one day
         <br />
         <br />
-        Let's go!...
+        <button
+          class="maxButton"
+          style="background-color: #eb3a1b; color: white"
+        >
+          Let's go!...
+        </button>
       </div>
     </section>
   </div>
