@@ -1,6 +1,20 @@
 <template>
   <section>
     <div v-if="clicked && !fail && !celebrate" style="margin-top: 5rem"></div>
+    <div v-if="!clicked" class=" mt-5 margin_response margin-bottom-large">
+      <h1>How to get you and Alex to be some of Acornia's beloved:</h1>
+      <br />
+      <p>1. Set your tasks way down below on your screen 📝</p>
+      <p>2. Head off to do them in the time you choose 🕐</p>
+      <p>3. Make sure to stop the Ticker between 90 and 100% ✅</p>
+      <br />
+      <p>Get three in a row and you are in for a suprise !!!</p>
+      <br />
+      <p>
+        Once your done and want to go again, head back to Home and refresh your
+        page...
+      </p>
+    </div>
     <div v-if="!clicked" class="mt-5 margin-bottom-large">
       <div v-if="!clicked" class="mb-5 col-12">
         <button
