@@ -1,7 +1,7 @@
 <template>
   <section>
     <div v-if="clicked && !fail && !celebrate" style="margin-top: 5rem"></div>
-    <div v-if="!clicked" class=" mt-5 margin_response margin-bottom-large">
+    <div v-if="!clicked" class=" m-5 margin_response margin-bottom-large">
       <h1>How to get you and Alex to be some of Acornia's beloved:</h1>
       <br />
       <p>1. Set your tasks way down below on your screen 📝</p>
