@@ -127,9 +127,12 @@
   background-color: #eb3a1b;
   color: white;
   padding: 01rem;
-  border-radius: 150%;
-  box-shadow: 1rem 1rem rgba(black, 0.5);
+  border-radius: 10%;
+  box-shadow: 0.1rem 0.1rem rgba(black, 0.5);
+  transition: 0.3s;
 
   &:hover {
+    box-shadow: 0.5rem 0.5rem rgba(black, 0.5);
+    transform: translateY(-0.5rem);
   }
 }
