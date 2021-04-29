@@ -8,7 +8,7 @@
         </p>
       </div>
       <ImageWaiting />
-      <h1 class="start__description mb-5 white_text">
+      <h1 class="start__description white_text">
         We have 1440 minutes every day... let's use the first few right
       </h1>
       <div class="story_text white_text">
@@ -16,7 +16,7 @@
         <!-- Anri you can probably put the first acorn person svg here-->
         <br />
       </div>
-      <ImprovementMan class="mb-5" />
+      <ImprovementMan style="background: white" class="mb-5" />
       <div class="story_text white_text">
         <br />
         Olaf is unflappable and on top of it all!
@@ -40,7 +40,7 @@
         Because while others slumber, they go exploring
         <br />
       </div>
-      <MaxOne style="backgroundColor: white" />
+      <MaxOne style="backgroundColor: white; margin-left: -7.5%" />
       <div class="story_text white_text">
         <br />
         Now meet Alex....<!--Anri then the second one after this, probably-->
@@ -74,7 +74,6 @@
         Let's go!...
       </div>
     </section>
-    <MaxTwo />
   </div>
 </template>
 
@@ -84,7 +83,6 @@ import ImageWaiting from "@/components/ImageWaiting";
 import ImprovementMan from "../components/ImprovementMan";
 import ImprovementWoman from "../components/ImprovementWoman";
 import MaxOne from "../components/MaxOne";
-import MaxTwo from "../components/MaxTwo";
 
 export default {
   name: "Home",
@@ -93,7 +91,6 @@ export default {
     ImprovementMan,
     ImprovementWoman,
     MaxOne,
-    MaxTwo,
   },
 };
 </script>

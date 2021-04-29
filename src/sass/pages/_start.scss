@@ -2,6 +2,7 @@
   background-color: #0275d8;
   margin: 5rem;
   padding: 5rem 0;
+  align-items: center;
 
   @include respond(tab-portrait) {
     // width < 600
@@ -91,7 +92,7 @@
 
 .story_text {
   font-size: 2rem;
-  margin: 15rem 5rem 10rem 5rem;
+  margin: 5rem;
 
   @include respond(tab-portrait) {
     // width < 600

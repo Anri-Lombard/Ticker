@@ -1,7 +1,7 @@
 <template>
   <section>
     <div v-if="clicked && !fail && !celebrate" style="margin-top: 5rem"></div>
-    <div v-if="!clicked" class=" m-5 margin_response margin-bottom-large">
+    <div v-if="!clicked" class="mt-5 margin-bottom-medium">
       <h1>How to get you and Alex to be some of Acornia's beloved:</h1>
       <br />
       <p>1. Set your tasks way down below on your screen 📝</p>
@@ -15,7 +15,7 @@
         page...
       </p>
     </div>
-    <div v-if="!clicked" class="mt-5 margin-bottom-large">
+    <div v-if="!clicked" class="mt-5 margin-bottom-medium">
       <div v-if="!clicked" class="mb-5 col-12">
         <button
           type="submit"
@@ -25,7 +25,7 @@
             testMode();
           "
         >
-          For testing (3 second activities)
+          RUN!!! (3 second activities)
         </button>
       </div>
       <div v-if="!clicked" class="mb-5 col-12">
@@ -37,7 +37,7 @@
             maxMode();
           "
         >
-          Max Mode (for preparation to present - 1 minute activities)
+          Presentation Mode (30 second activities)
         </button>
       </div>
       <div v-if="!clicked" class="mb-5 col-12 responsive-button">
@@ -67,7 +67,7 @@
       <!-- </form> -->
     </div>
 
-    <figure v-if="!clicked" class="margin_response margin-bottom-large">
+    <figure v-if="!clicked" class="margin_response margin-bottom-medium">
       <blockquote class="blockquote">
         <p>
           The journey starts with a single step—not with thinking about taking a
@@ -124,13 +124,20 @@
         :finishCounter="finishCounter"
       />
     </div>
-    <Confetti v-if="celebrate && successCount == 3" />
-    <WinkFace v-if="celebrate && successCount == 1" />
-    <WinkFace v-if="celebrate && successCount == 2" />
+    <div v-if="celebrate && successCount == 3" class="parent">
+      <MaxOne class="image1" v-if="celebrate && successCount == 3" />
+      <Confetti class="image2" v-if="celebrate && successCount == 3" />
+    </div>
+    <MaxTwo v-if="celebrate && successCount == 1" />
+    <MaxTwo v-if="celebrate && successCount == 2" />
     <IceCreamDrop v-if="fail && successCount == 0" />
     <UserList v-if="!clicked" />
     <p v-if="celebrate || fail" class="circular__title">
       You completed {{ successCount }} / 3 tasks
+    </p>
+    <p class="mt-5" v-if="celebrate">
+      Once your done and want to go again, head back to Home and refresh your
+      page...
     </p>
   </section>
 </template>
@@ -145,8 +152,9 @@ import Number3 from "./Number3";
 import Number4 from "./Number4";
 import Number5 from "./Number5";
 import Confetti from "./Confetti";
-import WinkFace from "./WinkFace";
 import IceCreamDrop from "./IceCreamDrop";
+import MaxOne from "./MaxOne";
+import MaxTwo from "./MaxTwo";
 
 // audio.play();
 
@@ -159,7 +167,6 @@ export default {
   },
   name: "ProgressBar",
   components: {
-    WinkFace,
     Circle,
     UserList,
     Number1,
@@ -169,6 +176,8 @@ export default {
     Number5,
     Confetti,
     IceCreamDrop,
+    MaxOne,
+    MaxTwo,
   },
   data() {
     return {
@@ -230,7 +239,7 @@ export default {
       this.activityTime = 0.05;
     },
     maxMode() {
-      this.activityTime = 1;
+      this.activityTime = 0.5;
     },
     easyMode() {
       this.activityTime = 10;

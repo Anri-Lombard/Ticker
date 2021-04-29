@@ -3,7 +3,7 @@
     src="https://assets3.lottiefiles.com/packages/lf20_yoatyllj.json"
     background="transparent"
     speed="1"
-    style="width: 100%; height: 100%;"
+    style="width: 100vw; height: 100vh; margin-left: -6%"
     loop
     autoplay
   ></lottie-player>
