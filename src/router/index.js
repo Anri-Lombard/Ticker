@@ -33,6 +33,10 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior() {
+    document.getElementById("app").scrollIntoView();
+  },
+  mode: "history",
 });
 
 export default router;

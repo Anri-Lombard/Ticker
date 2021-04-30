@@ -74,7 +74,7 @@
         <br />then maybe you and Alex could be great, too, one day
         <br />
         <br />
-        <router-link class="maxButton" to="/getshtdone/#top">
+        <router-link class="maxButton" to="/getshtdone">
           Let's Go
         </router-link>
       </div>
