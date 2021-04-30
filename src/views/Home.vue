@@ -74,9 +74,9 @@
         <br />then maybe you and Alex could be great, too, one day
         <br />
         <br />
-        <button class="maxButton" onclick="location.href = '/getshtdone'">
+        <a class="maxButton" href="/getshtdone">
           Let's Go
-        </button>
+        </a>
       </div>
     </section>
   </div>
