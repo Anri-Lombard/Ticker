@@ -10,10 +10,6 @@
       <br />
       <p>Get three in a row and you are in for a suprise !!!</p>
       <br />
-      <p>
-        Once your done and want to go again, head back to Home and refresh your
-        page...
-      </p>
     </div>
     <div v-if="!clicked" class="mt-5 margin-bottom-medium">
       <div v-if="!clicked" class="mb-5 col-12">
@@ -134,10 +130,6 @@
     <UserList v-if="!clicked" />
     <p v-if="celebrate || fail" class="circular__title">
       You completed {{ successCount }} / 3 tasks
-    </p>
-    <p class="mt-5" v-if="celebrate || fail">
-      Once your done and want to go again, head back to Home and refresh your
-      page...
     </p>
   </section>
 </template>
