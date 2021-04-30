@@ -12,15 +12,7 @@
         <router-link class="navbar-brand mb-2 h1" to="/">Home</router-link>
       </div>
       <div class=" container d-flex justify-content-center">
-        <router-link
-          @click="
-            () => {
-              this.$router.go();
-            }
-          "
-          class="navbar-brand mb-2 h1"
-          to="/getshtdone"
-        >
+        <router-link class="navbar-brand mb-2 h1" to="/getshtdone">
           Improve
         </router-link>
       </div>
