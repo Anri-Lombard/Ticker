@@ -147,3 +147,28 @@ footer {
   top: 30px;
   left: 30px;
 }
+
+#GrassDark,
+#DafodilStem {
+  animation: windy 2s linear infinite;
+}
+
+#GrassOne,
+#GrassTwo,
+#OrangeGlow,
+#YellowGlow {
+  animation: littleWindy 0.5s linear infinite;
+}
+
+#DafodilFlower,
+#BodyAndPole,
+#3DEffectOnBodyAndPole {
+  animation: shakeHead 0.5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: 100% 100%;
+}
+
+#ArmFront,
+#ArmBack {
+  z-index: 100;
+}

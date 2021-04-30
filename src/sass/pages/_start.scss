@@ -106,6 +106,45 @@
   }
 }
 
+.ImprovementManScaling {
+  margin-left: -6%;
+
+  @include respond(tab-portrait) {
+    // width < 600
+    margin: 0;
+  }
+
+  @include respond(phone) {
+    margin: 0;
+  }
+}
+
+.ImprovementWomanScaling {
+  margin-left: -6%;
+
+  @include respond(tab-portrait) {
+    // width < 600
+    margin: 0;
+  }
+
+  @include respond(phone) {
+    margin: 0;
+  }
+}
+
+.MaxOneScaling {
+  margin-left: -7.5%;
+
+  @include respond(tab-portrait) {
+    // width < 600
+    margin: 0;
+  }
+
+  @include respond(phone) {
+    margin: 0;
+  }
+}
+
 #RightArm {
   animation: wave 5s infinite linear;
   transform-box: fill-box;
@@ -130,6 +169,7 @@
   border-radius: 10%;
   box-shadow: 0.1rem 0.1rem rgba(black, 0.5);
   transition: 0.3s;
+  text-decoration: none;
 
   &:hover {
     box-shadow: 0.5rem 0.5rem rgba(black, 0.5);

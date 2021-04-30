@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "compile-sass": "node-sass sass/main.scss css/style.css --watch"
+    "compile-sass": "node-sass src/sass/main.scss src/sass/style.css --watch"
   },
   "dependencies": {
     "@lottiefiles/lottie-interactivity": "^0.1.4",

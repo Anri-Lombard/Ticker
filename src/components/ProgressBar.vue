@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="top">
     <div v-if="clicked && !fail && !celebrate" style="margin-top: 5rem"></div>
     <div v-if="!clicked" class="mt-5 margin-bottom-medium">
       <h1>How to get you and Alex to be some of Acornia's beloved:</h1>
@@ -49,7 +49,7 @@
             easyMode();
           "
         >
-          Einstein in a year (10 min activities)
+          Einstein In A Year (10 min activities)
         </button>
       </div>
       <div v-if="!clicked" class="mb-5 col-12">
@@ -61,7 +61,7 @@
             hardMode();
           "
         >
-          Beyonce in a month! (20 min activities!)
+          Beyonce In A Month! (20 min activities!)
         </button>
       </div>
       <!-- </form> -->

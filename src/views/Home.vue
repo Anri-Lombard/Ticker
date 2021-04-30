@@ -16,7 +16,10 @@
         <!-- Anri you can probably put the first acorn person svg here-->
         <br />
       </div>
-      <ImprovementMan style="background: white" class="mb-5" />
+      <ImprovementMan
+        style="background: white"
+        class="mb-5 ImprovementManScaling"
+      />
       <div class="story_text white_text">
         <br />
         Olaf is unflappable and on top of it all!
@@ -28,7 +31,7 @@
         This early bird gets their way
         <br />
       </div>
-      <ImprovementWoman />
+      <ImprovementWoman class="ImprovementWomanScaling" />
       <div class="story_text white_text">
         <br />
         Sal is straightforward - a plain old pal
@@ -40,7 +43,7 @@
         Because while others slumber, they go exploring
         <br />
       </div>
-      <MaxOne style="backgroundColor: white; margin-left: -7.5%" />
+      <MaxOne class="MaxOneScaling" style="backgroundColor: white;" />
       <div class="story_text white_text">
         <br />
         Now meet Alex....<!--Anri then the second one after this, probably-->
@@ -71,13 +74,8 @@
         <br />then maybe you and Alex could be great, too, one day
         <br />
         <br />
-        <form action="/getshtdone">
-          <input
-            type="submit"
-            class="maxButton"
-            style="background-color: #eb3a1b; color: white"
-            value="Let's Go"
-          />
+        <form action="/getshtdone/#top">
+          <input type="submit" class="maxButton" value="Let's Go" />
         </form>
       </div>
     </section>
