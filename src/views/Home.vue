@@ -74,9 +74,9 @@
         <br />then maybe you and Alex could be great, too, one day
         <br />
         <br />
-        <form action="/getshtdone/#top">
-          <input type="submit" class="maxButton" value="Let's Go" />
-        </form>
+        <button class="maxButton" onclick="location.href = '/getshtdone'">
+          Let's Go
+        </button>
       </div>
     </section>
   </div>
