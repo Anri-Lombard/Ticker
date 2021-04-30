@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div id="top" class="about">
     <ProgressBar />
   </div>
 </template>
